@@ -65,6 +65,12 @@ app.get('/about', (req, res) => {
   // res.send('<h1>About page</h1>');
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Portfolio'
+  });
+});
+
 // registers another handler for that http request
 app.get('/bad', (req, res) => {
   res.send({
@@ -76,3 +82,4 @@ app.get('/bad', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
+// https://serene-harbor-22637.herokuapp.com/
