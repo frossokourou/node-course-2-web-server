@@ -3,6 +3,8 @@ const express = require('express');
 const hbs = require('hbs');
 // to print a message to a file
 const fs = require('fs');
+// add port to run with heroku
+const port = process.env.PORT || 3000;
 // to create an app call the function!
 const app = express();
 
@@ -71,6 +73,6 @@ app.get('/bad', (req, res) => {
 });
 
 // The app starts up a server that listens on port 3000 for connections
-app.listen(3000, () => {
-  console.log('Server is up on port 3000')
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
